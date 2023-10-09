@@ -1,0 +1,9 @@
+1)Make a directory structure like this in your home directory
+ANS)
+    mkdir demodir demodir/inside_demo demodir/also_inside_demo demodir/also_inside_demo/abc demodir/also_inside_demo/abc_123
+
+2) Remove the also_inside_demo directory
+ANS)
+    cp -r demodir demodir/also_inside_demo
+    rmdir demodir/also_inside_demo
+    we cannot directly delete a parent directory without deleting its children
