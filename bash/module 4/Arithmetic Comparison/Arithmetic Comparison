@@ -1,0 +1,7 @@
+1) Write a program to demonstrate the use of not equal to operator.
+ANS)
+    read -p "Enter a number" n
+    if [ $n -ne 10 ]; then
+	    echo "not 10"
+    else 
+    	echo "10"

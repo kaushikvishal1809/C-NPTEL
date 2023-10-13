@@ -1,0 +1,3 @@
+1) Write a bash program for addition using command line arguments.
+ANS)
+    echo "The sum of $1 and $2 is: $(($1 + $2))"

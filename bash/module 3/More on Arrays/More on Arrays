@@ -1,0 +1,15 @@
+1) Declare an Array names2 of length 7 and perform following operations-
+   a. Extract three elements starting from index two. 
+   b. Replace third element with 'Debian' and display.
+   c. Append any new name at the end of Array.
+ANS)
+    names=("A" "B" "C" "D" "E" "F" "G")
+    
+    extracted_elements=("${names2[@]:2:3}")
+    echo "a. Extracted elements starting from index 2: ${extracted_elements[*]}"
+
+    names2[2]="Debian"
+    echo "b. Updated array with 'Debian' at index 2: ${names2[*]}"
+
+    new_name="H"
+    names2+=("$new_name")

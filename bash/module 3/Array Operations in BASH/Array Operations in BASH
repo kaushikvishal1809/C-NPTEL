@@ -1,0 +1,13 @@
+1) Declare an Array names of length 7 and find
+   a. The total number of elements
+   b. Print all the elements
+   c. Print the 5th element
+ANS)
+    names=("A" "B" "C" "D" "E" "F" "G")
+    total="${#names[@]}"
+    echo "a. Total number of elements: $total"
+    for element in "${names[@]}"; do
+        echo "$element"
+    done
+    fifth_element="${names[4]}"
+    echo "c. The 5th element: $fifth_element"

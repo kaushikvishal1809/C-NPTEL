@@ -1,0 +1,17 @@
+1) Write a function add to add two numbers and call the function in another file.
+ANS)
+    file.sh:
+
+    #!/bin/bash
+    function addition {
+        a=$1
+        b=$2
+        c=$(($a+$b))
+        echo $c
+    }
+
+    main.sh
+
+    #!/bin/bash
+    source file.sh
+    addition 2 4

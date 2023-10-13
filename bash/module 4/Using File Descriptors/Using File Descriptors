@@ -1,0 +1,7 @@
+1) Try to append few lines to a file test.txt using file descriptor.
+2) Display the content of the file using file descriptor.
+ANS)
+    echo "This is a line appended to test.txt using FD 1." >> test.txt
+    echo "Another line appended to test.txt using FD 1." >> test.txt
+    cat < test.txt
+    cat 2< test.txt

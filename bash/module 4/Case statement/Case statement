@@ -1,0 +1,77 @@
+1) Write a menu driven program for mathematical calculation
+   a. It should take user inputs a and b
+   b. It should ask for mathematical operator (+, -, / and *).
+   c. Do the calculation
+   d. Print the output
+ANS)
+    perform_calculation() {
+        local a="$1"
+        local operator="$2"
+        local b="$3"
+        local result=""
+
+        case "$operator" in
+            "+")
+                result=$((a + b))
+                ;;
+            "-")
+                result=$((a - b))
+                ;;
+            "*")
+                result=$((a * b))
+                ;;
+            "/")
+                if [ "$b" -ne 0 ]; then
+                    result=$(bc -l <<< "scale=2; $a / $b")
+                else
+                    result="Division by zero is not allowed"
+                fi
+                ;;
+            *)
+                result="Invalid operator: $operator"
+                ;;
+        esac
+
+        echo "Result: $result"
+    }
+
+    while true; do
+        echo "Menu:"
+        echo "a. Addition"
+        echo "s. Subtraction"
+        echo "m. Multiplication"
+        echo "d. Division"
+        echo "q. Quit"
+
+        read -p "Select an operation (a/s/m/d/q): " choice
+
+        case "$choice" in
+            "a")
+                read -p "Enter the first number (a): " a
+                read -p "Enter the second number (b): " b
+                perform_calculation "$a" "+" "$b"
+                ;;
+            "s")
+                read -p "Enter the first number (a): " a
+                read -p "Enter the second number (b): " b
+                perform_calculation "$a" "-" "$b"
+                ;;
+            "m")
+                read -p "Enter the first number (a): " a
+                read -p "Enter the second number (b): " b
+                perform_calculation "$a" "*" "$b"
+                ;;
+            "d")
+                read -p "Enter the numerator (a): " a
+                read -p "Enter the denominator (b): " b
+                perform_calculation "$a" "/" "$b"
+                ;;
+            "q")
+                echo "Goodbye!"
+                exit 0
+                ;;
+            *)
+                echo "Invalid choice. Please select a valid operation."
+                ;;
+        esac
+    done

@@ -1,0 +1,7 @@
+1) Check whether the file exists and is executable using logical operators.
+ANS)
+    if [ -f "$file" ] && [ -x "$file" ]; then
+        echo "The file exists and is executable."
+    else
+        echo "The file is either not existent or is not executable."
+    fi

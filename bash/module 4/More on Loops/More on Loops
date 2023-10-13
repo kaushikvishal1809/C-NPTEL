@@ -1,0 +1,19 @@
+1) Retype nested-for.sh bash script using nested while loop
+2) Save your program with the name: nested-while.sh
+ANS)
+    read -p "Enter the number of rows: " rows
+    read -p "Enter the number of columns: " columns
+
+    row=1
+
+    while [ "$row" -le "$rows" ]; do
+        column=1
+
+        while [ "$column" -le "$columns" ]; do
+            echo -n "$row,$column  "
+            column=$((column + 1))
+        done
+
+        echo
+        row=$((row + 1))
+    done

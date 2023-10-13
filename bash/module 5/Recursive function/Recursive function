@@ -1,0 +1,21 @@
+1) Write a program where the recursive function calculates the sum of N numbers 
+ANS)
+    calculate_sum_recursive() {
+        local N="$1"
+
+        if [ "$N" -le 0 ]; then
+            echo "Sum is 0"
+        else
+            read -p "Enter number $N: " num
+            local remaining_sum
+            remaining_sum=$(calculate_sum_recursive "$((N - 1))")
+            local sum
+            sum=$((num + remaining_sum))
+            echo "Sum of the first $N numbers is $sum"
+            echo "$sum"
+        fi
+    }
+
+    read -p "Enter the value of N: " N
+
+    calculate_sum_recursive "$N"

@@ -1,0 +1,9 @@
+1) Convert a string to uppercase using:
+	a) Here document
+	b) Here string
+ANS)
+    tr a-z A-Z << HERE
+        hi
+        my name 
+        is kaushik
+    HERE

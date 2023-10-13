@@ -1,0 +1,13 @@
+3) Create a text file with some content like your name, address.
+4) Redirect the content to a new file. 
+ANS)
+    file1.txt:
+
+    Kaushik,
+    1/2, abc street, xyz city
+
+    file.sh
+
+    #!/bin/bash
+
+    cat file1.txt > file2.txt

@@ -1,0 +1,7 @@
+1) Create X_file.txt file with some content.
+2) Redirect the content of both out_file.txt and X_file.txt to a new file
+ANS)
+    ls /usr /user &> X_file.txt
+    cat out_file.txt > new_file.txt
+    cat X_file.txt >> new_file.txt
+    

@@ -1,0 +1,8 @@
+1) Explore some more attributes
+   -r
+   -x
+   -o
+ ANS)  
+    -r : This attribute checks if a file is readable.
+    -x : This attribute checks if a file is executable.
+    -o : This attribute checks if the file is owned by the current user.
