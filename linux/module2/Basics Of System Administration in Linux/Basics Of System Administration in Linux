@@ -1,0 +1,15 @@
+1) Create a new user account and home directory called "Duck" 
+ANS)
+    sudo adduser Duck
+
+2) Set the user account "Duck's" expirey date as 07 - 01 - 2015
+ANS)
+    sudo usermod -e 2015-01-07 Duck
+
+3) find the id of the user account "Duck"
+ANS)
+    id -u
+ 
+6) Delete the user account "Duck" permanently along with its home folder.
+ANS)
+    sudo userdel -r Duck
